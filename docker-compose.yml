@@ -1,0 +1,20 @@
+services:
+  snowbridge:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: snowbridge
+    restart: unless-stopped
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    ports:
+      - 8000:8000
+      - 8001:8001
+      - 8002:8002
+    command:
+      - npx
+      - '@acala-network/chopsticks'
+      - xcm
+      - --r=/configs/polkadot.yml
+      - --p=/configs/acala.yml
+      - --p=/configs/polkadot-asset-hub.yml
