@@ -2,6 +2,7 @@ endpoint: wss://polkadot-asset-hub-rpc.polkadot.io
 mock-signature-host: true
 block: ${env.POLKADOT_ASSET_HUB_BLOCK_NUMBER}
 db: ./db.sqlite
+wasm-override: /configs/asset_hub_polkadot_runtime.compact.compressed.wasm
 
 import-storage:
   System:
@@ -20,4 +21,4 @@ import-storage:
     Asset: [[[21], { supply: 1000000000 }]]
   ForeignAssets:
     Account:
-      - [[{ parents: 2, interior: { X2: [{ GlobalConsensus: { Ethereum: { chainId: 1 }}}, { AccountKey20: { network: null, key: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2' }}]}}, 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY], { balance: 1000000000, status: Liquid, reason: Consumer, extra: null }]
+      - [[{ parents: 2, interior: { X2: [{ GlobalConsensus: { Ethereum: { chainId: 1 }}}, { AccountKey20: { network: null, key: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2' }}]}}, 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY], { balance: '1000000000000000000000', status: Liquid, reason: Consumer, extra: null }]
