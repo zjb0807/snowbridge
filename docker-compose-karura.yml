@@ -1,0 +1,40 @@
+services:
+  snowbridge:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: snowbridge
+    restart: unless-stopped
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    ports:
+      - 8000:8000
+      - 8001:8001
+      - 8002:8002
+    environment:
+      KARURA_BLOCK_NUMBER: 9247493
+    command:
+      - npx
+      - '@acala-network/chopsticks'
+      - xcm
+      - --r=/configs/kusama.yml
+      - --p=/configs/karura.yml
+      - --p=/configs/kusama-asset-hub.yml
+    #command:
+    #  - npx
+    #  - '@acala-network/chopsticks'
+    #  - run-block
+    #  - -b=8254386
+    #  - --config=/configs/karura.yml
+    #environment:
+    #  KARURA_BLOCK_NUMBER: 8254385
+    #command:
+    #  - npx
+    #  - '@acala-network/chopsticks'
+    #  - --config=/configs/karura.yml
+    #command:
+    #  - npx
+    #  - '@acala-network/chopsticks'
+    #  - dry-run
+    #  - --config=/configs/karura.yml
+    #  - --extrinsic=0x91028400e42a52874e66ab3bfede98c95cf58f502b10fc6b01ebf75d5fb1d4614fae8a5f01f00ec64ea724955b7ca3cb63444f3ab2cd5115b3b9e10e51f3c0d6c08dfcbb20ee5dbbe50bd9425605ebfb8b703060a63dba1764749e97c459a3651ad0697987e40030010036010100010100591f001357f27f527b481e0c01010200591f0100b20f7e14d3f0882943612e458b7b032de0313ecbf6eb1c0605c56a48165df15d00
