@@ -1,5 +1,5 @@
-#endpoint: wss://polkadot-asset-hub-rpc.polkadot.io
-endpoint: wss://chopsticks-acala.aca-dev.network/assethub
+endpoint: wss://polkadot-asset-hub-rpc.polkadot.io
+#endpoint: wss://chopsticks-acala.aca-dev.network/assethub
 mock-signature-host: true
 block: ${env.POLKADOT_ASSET_HUB_BLOCK_NUMBER}
 db: ./db.sqlite
@@ -25,3 +25,10 @@ import-storage:
   ForeignAssets:
     Account:
       - [[{ parents: 2, interior: { X2: [{ GlobalConsensus: { Ethereum: { chainId: 1 }}}, { AccountKey20: { network: null, key: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2' }}]}}, 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY], { balance: '1000000000000000000000', status: Liquid, reason: Consumer, extra: null }]
+      - [
+          [
+            { parents: 2, interior: { X1: [{ GlobalConsensus: { Ethereum: { chainId: 1 } } }] } },
+            5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY,
+          ],
+          { balance: "100000000000000000000" },
+        ]
