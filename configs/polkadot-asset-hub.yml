@@ -1,9 +1,11 @@
-endpoint: wss://polkadot-asset-hub-rpc.polkadot.io
+#endpoint: wss://polkadot-asset-hub-rpc.polkadot.io
+endpoint: wss://chopsticks-acala.aca-dev.network/assethub
 mock-signature-host: true
 block: ${env.POLKADOT_ASSET_HUB_BLOCK_NUMBER}
 db: ./db.sqlite
 runtime-log-level: 5
-wasm-override: /configs/asset_hub_polkadot_runtime.compact.compressed.wasm
+#wasm-override: /configs/asset_hub_polkadot_runtime.1005001.compact.compressed.wasm
+wasm-override: /home/x/source/zjb0807/snowbridge/configs/asset_hub_polkadot_runtime.1005001.compact.compressed.wasm
 
 import-storage:
   System:

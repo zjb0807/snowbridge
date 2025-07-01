@@ -1,11 +1,11 @@
-endpoint:
-  - wss://acala-rpc.aca-api.network
-  - wss://acala-rpc.dwellir.com
+endpoint: wss://acala-rpc.aca-api.network
+#endpoint: wss://chopsticks-acala.aca-dev.network/acala
 mock-signature-host: true
 block: ${env.ACALA_BLOCK_NUMBER}
 db: ./db.sqlite
 runtime-log-level: 5
 wasm-override: /configs/acala_runtime.2300.compact.compressed.wasm
+#wasm-override: /home/x/source/zjb0807/snowbridge/configs/acala_runtime.2300.compact.compressed.wasm
 
 import-storage:
   Sudo:
