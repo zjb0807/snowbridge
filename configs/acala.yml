@@ -1,7 +1,9 @@
 endpoint: wss://acala-rpc.aca-api.network
+#endpoint: ws://192.168.50.62:8000
 #endpoint: wss://chopsticks-acala.aca-dev.network/acala
 mock-signature-host: true
-block: ${env.ACALA_BLOCK_NUMBER}
+block: 9026116
+#block: ${env.ACALA_BLOCK_NUMBER}
 db: ./db.sqlite
 runtime-log-level: 5
 wasm-override: /configs/acala_runtime.2300.compact.compressed.wasm
@@ -85,3 +87,5 @@ import-storage:
     Accounts:
     - - - '0x75E480dB528101a381Ce68544611C169Ad7EB342'
       - 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+  Homa:
+    NominateIntervalEra: 1

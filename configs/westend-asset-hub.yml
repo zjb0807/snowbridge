@@ -1,11 +1,11 @@
-endpoint: wss://kusama-asset-hub-rpc.polkadot.io
-#endpoint: wss://chopsticks-karura.aca-dev.network/assethub
+endpoint: wss://westend-asset-hub-rpc.polkadot.io
+#endpoint: wss://chopsticks-acala.aca-dev.network/assethub
 mock-signature-host: true
-block: ${env.KUSAMA_ASSET_HUB_BLOCK_NUMBER}
+block: ${env.WESTEND_ASSET_HUB_BLOCK_NUMBER}
 db: ./db.sqlite
 runtime-log-level: 5
-#wasm-override: /configs/asset_hub_kusama_runtime.1005001.compact.compressed.wasm
-wasm-override: /home/x/source/zjb0807/snowbridge/configs/asset_hub_kusama_runtime.1005001.compact.compressed.wasm
+#wasm-override: /configs/asset_hub_westend_runtime.1018012.compact.compressed.wasm
+#wasm-override: /home/x/source/zjb0807/snowbridge/configs/asset_hub_westend_runtime.1018012.compact.compressed.wasm
 
 import-storage:
   System:
@@ -25,3 +25,10 @@ import-storage:
   ForeignAssets:
     Account:
       - [[{ parents: 2, interior: { X2: [{ GlobalConsensus: { Ethereum: { chainId: 1 }}}, { AccountKey20: { network: null, key: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2' }}]}}, 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY], { balance: '1000000000000000000000', status: Liquid, reason: Consumer, extra: null }]
+      - [
+          [
+            { parents: 2, interior: { X1: [{ GlobalConsensus: { Ethereum: { chainId: 1 } } }] } },
+            5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY,
+          ],
+          { balance: "100000000000000000000" },
+        ]
