@@ -2,7 +2,8 @@ endpoint:
   - wss://rpc.ibp.network/polkadot
   - wss://polkadot-rpc.dwellir.com
 mock-signature-host: true
-block: ${env.POLKADOT_BLOCK_NUMBER}
+block: 26894188
+#block: ${env.POLKADOT_BLOCK_NUMBER}
 db: ./db.sqlite
 runtime-log-level: 5
 wasm-override: /configs/polkadot_runtime.1005001.compact.compressed.wasm

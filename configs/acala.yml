@@ -6,7 +6,7 @@ block: 9026116
 #block: ${env.ACALA_BLOCK_NUMBER}
 db: ./db.sqlite
 runtime-log-level: 5
-wasm-override: /configs/acala_runtime.2300.compact.compressed.wasm
+wasm-override: /configs/acala_runtime.2300-20250720.compact.compressed.wasm
 #wasm-override: /home/x/source/zjb0807/snowbridge/configs/acala_runtime.2300.compact.compressed.wasm
 
 import-storage:
@@ -89,3 +89,6 @@ import-storage:
       - 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
   Homa:
     NominateIntervalEra: 1
+  XcmInterface:
+    XcmDestWeightAndFee:
+      - [[HomaNominate], [{refTime: 5000000000, proofSize: 131072}, 5000000000]]

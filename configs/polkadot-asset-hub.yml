@@ -31,6 +31,17 @@ import-storage:
           { balance: "100000000000000000000" },
         ]
   Staking:
+    Validators:
+      - [[1d6po5LATxuHeAUTSRd61LGA6QWJ7dJRzi852kojKFLbL3t], { commission: 0, blocked: false }]
+      - [[14N5nJ4oR4Wj36DsBcPLh1JqjvrM2Uf23No2yc2ojjCvSC24], { commission: 0, blocked: false }]
+      - [[14bUYpiF2oxVpmXDnFxBipSi4m9zYBThMZoLpY8bRQrPQNG1], { commission: 0, blocked: false }]
+      - [[14zf4PVrmW7LwLptMkZwhKK2fwroFnMpMLrKiy5jpYCMZBwW], { commission: 0, blocked: false }]
+      - [[1569aqCBma2m4TuUe1MxEs8EXBAZFCmwwcZMLde6HNbimuW8], { commission: 0, blocked: false }]
+      - [[15XY7oJ99hVscy5jS3zUh5M3H6sxfccovyTVCPt15DuXCRAF], { commission: 0, blocked: false }]
+      - [[15iA5hpjUecWBbf38Nfegwmtyux25o3LrGaNodfZDxq5nXXE], { commission: 0, blocked: false }]
+      - [[16NWoCHEY67DDHCLe76QhgKD3AAcRQtarY54FFQQaJeftJNu], { commission: 0, blocked: false }]
+      - [[15faP4KV8Puvtex2WXnhUoeedhNpTPt4jWcAmZVsUuNMVvUX], { commission: 0, blocked: false }]
+      - [[14AakQ4jAmr2ytcrhfmaiHMpj5F9cR6wK1jRrdfC3N1oTbUz], { commission: 0, blocked: false }]
     Bonded:
       - [[12pw22Qyy3o28BLshjce9yrSMs3fhSiLsAjqLPAzGktbXYV7], 12pw22Qyy3o28BLshjce9yrSMs3fhSiLsAjqLPAzGktbXYV7]
     ledger:
