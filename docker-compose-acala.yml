@@ -24,6 +24,12 @@ services:
     #  - run-block
     #  - -b=8254386
     #  - --config=/configs/acala.yml
+    #command:
+    #  - npx
+    #  - '@acala-network/chopsticks'
+    #  - run-block
+    #  - -b=9451663
+    #  - --config=/configs/polkadot-asset-hub.yml
     #environment:
     #  ACALA_BLOCK_NUMBER: 8254385
     #command:

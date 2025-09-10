@@ -4,8 +4,8 @@ mock-signature-host: true
 block: ${env.KUSAMA_ASSET_HUB_BLOCK_NUMBER}
 db: ./db.sqlite
 runtime-log-level: 5
-#wasm-override: /configs/asset_hub_kusama_runtime.1005001.compact.compressed.wasm
-wasm-override: /home/x/source/zjb0807/snowbridge/configs/asset_hub_kusama_runtime.1005001.compact.compressed.wasm
+wasm-override: /configs/asset_hub_kusama_runtime.1007001.compact.compressed.wasm
+#wasm-override: /home/x/source/zjb0807/snowbridge/configs/asset_hub_kusama_runtime.1007001.compact.compressed.wasm
 
 import-storage:
   System:
